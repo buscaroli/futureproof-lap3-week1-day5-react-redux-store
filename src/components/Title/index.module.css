@@ -1,5 +1,7 @@
 .wrapper {
-  font-size: 4rem;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  font-size: 3rem;
   letter-spacing: 2px;
   color: white;
 }
