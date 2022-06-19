@@ -18,7 +18,7 @@ describe('CheckoutButton', () => {
     expect(btn.textContent).toBe('Bag')
   })
 
-  it('tests the button has a class of "wrapper" ', () => {
+  it('tests the button has a class of "wrapper"', () => {
     expect(btn.classList.contains('wrapper')).toBeTruthy()
   })
 })

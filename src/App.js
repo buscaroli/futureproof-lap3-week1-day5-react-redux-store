@@ -1,10 +1,11 @@
-import './App.css'
-import { Header } from './layout'
+import { Header, Footer } from './layout'
+import styles from './App.module.css'
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.wrapper}>
       <Header />
+      <Footer />
     </div>
   )
 }
