@@ -1,10 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { CheckoutPage } from '../../pages'
 import styles from './index.module.css'
 
 
 function CheckoutButton({text}) {
+  
+
   return (
-    <div role="button" className={styles.wrapper}>{text}</div>
+    <Link to="/checkout"
+    role="button" 
+    className={styles.wrapper}>{text}
+    </Link>
+    
+    
   )
 }
 
