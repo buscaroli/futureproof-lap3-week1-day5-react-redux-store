@@ -1,6 +1,6 @@
 const initState = { balance: 10 }
 
-export const shoppingReducer = ({ state = initState, action }) => {
+export const shoppingReducer = (state = initState, action) => {
   switch (action.type) {
     case 'ADD':
       return { balance: state.balance + action.payload }
