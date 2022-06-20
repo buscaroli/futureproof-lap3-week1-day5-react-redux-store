@@ -1,12 +1,12 @@
 import React from 'react'
-import { ShoppingNavbar } from '../../components'
+import { ShoppingNavbar, ShoppingGrid } from '../../components'
 import styles from './index.module.css'
 
 function MainPage() {
   return (
     <div className={styles.wrapper}>
       <ShoppingNavbar />
-      <div>ShoppingGrid</div>
+      <ShoppingGrid />
     </div>
   )
 }

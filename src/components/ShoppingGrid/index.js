@@ -2,9 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 function ShoppingGrid() {
-  const balance = useSelector((state) => state.balance)
+  const shoppingCart = useSelector((state) => state.shoppingCart)
 
-  return <div>Balance: {balance}</div>
+  return <div>Shopping Items in here</div>
 }
 
 export default ShoppingGrid
