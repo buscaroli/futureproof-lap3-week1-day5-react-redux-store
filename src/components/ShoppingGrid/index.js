@@ -1,10 +1,27 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useState, useEffect } from 'react'
+import { getItems } from '../../api/fakeStore'
 
 function ShoppingGrid() {
-  const shoppingCart = useSelector((state) => state.shoppingCart)
+  const [storeItems, setStoreItems] = useState([])
 
-  return <div>Shopping Items in here</div>
+  useEffect(() => {
+    const getData = async () => {
+      const data = await getItems('jewelery')
+      setStoreItems(data.data)
+    }
+    getData()
+    console.log('*** list: ', storeItems)
+  }, [])
+
+  // console.log('*** list: ', storeItems)
+  return (
+    <ul>
+      {storeItems === []
+        ? 'Getting The Items from the Online Store...'
+        : storeItems.map((item) => <li key={item.id}>{item.title}</li>)}
+    </ul>
+  )
 }
 
 export default ShoppingGrid
