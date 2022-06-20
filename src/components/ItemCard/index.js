@@ -1,12 +1,26 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../../state/actionCreators'
 import styles from './index.module.css'
 
 function ItemCard({ id, title, description, price, image }) {
+  const dispatch = useDispatch()
+
   const handleAddItem = (e) => {
     e.preventDefault()
 
     console.log('clicked ', e.target)
     console.log('id is ', id)
+
+    const item = {
+      id,
+      title,
+      description,
+      price,
+      image,
+    }
+
+    dispatch(addItem(item))
   }
 
   return (
