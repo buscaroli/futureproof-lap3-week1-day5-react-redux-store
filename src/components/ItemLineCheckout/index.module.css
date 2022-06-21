@@ -1,0 +1,19 @@
+.wrapper {
+  /* display: grid;
+  grid-template-columns: 5fr, 10fr; */
+  /* grid-auto-rows: minmax(10px, auto); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;;
+  font-size: 1.5rem;
+  margin: 30px 50px;
+}
+
+.title {
+
+}
+
+.price {
+  font-weight: bold;
+  
+}

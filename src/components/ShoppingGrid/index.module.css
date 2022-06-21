@@ -1,7 +1,8 @@
 .wrapper {
-  
+  margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 400px);
+  grid-gap: 80px;
   grid-auto-rows: minmax(100px, auto);
+  list-style: none;
 }
