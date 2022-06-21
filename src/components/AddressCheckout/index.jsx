@@ -47,23 +47,24 @@ function AddressCheckout() {
 
     // dispatch username
     // reset inputs 
+    // Direct to ThankYouPage
   }
 
   return (
     <form className={styles.wrapper}>
       <label htmlFor="name">Name</label>
-      <input onChange={handleNameChange} type="text" id="name" value={name}/>
+      <input onChange={handleNameChange} className={styles.input} type="text" id="name" value={name}/>
       <label htmlFor="surname">Surname</label>
-      <input onChange={handleSurnameChange} type="text" id="surname" value={surname}/>
+      <input onChange={handleSurnameChange} className={styles.input} type="text" id="surname" value={surname}/>
       <label htmlFor="houseNumber">House Number</label>
-      <input onChange={handleHouseChange} type="text" id="houseNumber" value={houseNumber}/>
+      <input onChange={handleHouseChange}  className={styles.input}type="text" id="houseNumber" value={houseNumber}/>
       <label htmlFor="firstLineAddr">First Line Of Address</label>
-      <input onChange={handleFirstChange} type="text" id="firstLineAddr" value={first}/>
+      <input onChange={handleFirstChange}  className={styles.input}type="text" id="firstLineAddr" value={first}/>
       <label htmlFor="secondLineAddr">Second Line Of Address</label>
-      <input onChange={handleSecondChange} type="text" id="secondLineAddr" value={second}/>
+      <input onChange={handleSecondChange}  className={styles.input}type="text" id="secondLineAddr" value={second}/>
       <label htmlFor="postcode">Postcode</label>
-      <input onChange={handlePostcodeChange} type="text" id="postcode" value={postcode}/>
-      <input onSubmit={handleFormSubmit} type="submit" value="Place Order"/>
+      <input onChange={handlePostcodeChange} className={styles.input} type="text" id="postcode" value={postcode}/>
+      <input onSubmit={handleFormSubmit}  className={`${styles.input} ${styles.btn}`}type="submit" value="Place Order"/>
     </form>
   )
 }

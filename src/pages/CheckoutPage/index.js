@@ -1,5 +1,6 @@
 import React from 'react'
 import { ListBagItems } from '../../components'
+import AddressCheckout from '../../components/AddressCheckout'
 import styles from './index.module.css'
 
 function CheckoutPage() {
@@ -9,8 +10,8 @@ function CheckoutPage() {
         <ListBagItems />
       </div>
       <div className={styles.rightWrapper}>
-        <div>AddressCheckout</div>
-        <div>PaymentPage</div>
+        <AddressCheckout />
+
         <div>BackButton</div>
       </div>
     </div>

@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
-  
+  font-size: 1.5rem;
+  margin: 20px 50px;
 }
 
 .label {
@@ -11,6 +12,14 @@
 }
 
 .input {
+  padding: 10px;
+  margin-bottom: 30px;
+}
 
+.btn {
+  font-size: 1.5rem;
+  background-color: teal;
+  color: white;
+  padding: 15px;
 }
 
