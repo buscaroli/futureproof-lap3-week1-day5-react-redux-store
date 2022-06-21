@@ -2,10 +2,17 @@ const initState = {
   shoppingCart: [
     {
       id: 1,
-      title: 'title',
+      title: 'Example Title of this Item in here',
       price: '100',
-      description: 'description',
+      description: 'Example description of this item in here',
       category: 'jewelery',
+    },
+    {
+      id: 2,
+      title: 'Second Example Title of an Item in here',
+      price: '150',
+      description: 'Another Example description of an item in here',
+      category: 'electronics',
     },
   ],
 }
