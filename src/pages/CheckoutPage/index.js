@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListBagItems } from '../../components'
+import { BackToMainButton, ListBagItems } from '../../components'
 import AddressCheckout from '../../components/AddressCheckout'
 import styles from './index.module.css'
 
@@ -11,8 +11,7 @@ function CheckoutPage() {
       </div>
       <div className={styles.rightWrapper}>
         <AddressCheckout />
-
-        <div>BackButton</div>
+        <BackToMainButton />
       </div>
     </div>
   )
