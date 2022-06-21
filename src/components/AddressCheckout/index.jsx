@@ -1,4 +1,7 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { updateUserDetails } from '../../state/actionCreators'
 import styles from './index.module.css'
 
 function AddressCheckout() {
@@ -8,6 +11,9 @@ function AddressCheckout() {
   const [first, setFirst] = useState('')
   const [second, setSecond] = useState('')
   const [postcode, setPostcode] = useState('')
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleNameChange = (e) => {
     e.preventDefault()
@@ -45,8 +51,16 @@ function AddressCheckout() {
   const handleFormSubmit = (e) => {
     e.preventDefault()
 
-    // dispatch username
-    // reset inputs 
+    dispatch(updateUserDetails())
+    
+    setName('')
+    setSurname('')
+    setHouseNumber('')
+    setFirst('')
+    setSecond('')
+    setPostcode('')
+    
+    navigate('/thankyou')
     // Direct to ThankYouPage
   }
 

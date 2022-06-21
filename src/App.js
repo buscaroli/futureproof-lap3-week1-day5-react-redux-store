@@ -10,6 +10,7 @@ function App() {
       <Switch>
         <Route path="" element={<MainPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        {/* <Route path="/thankyou" element={<ThankYouPage />} /> */}
       </Switch>
       <Footer />
     </div>

@@ -15,3 +15,12 @@ export const removeItem = (item) => {
     })
   }
 }
+
+export const updateUserDetails = (user) => {
+  return (dispatch) => {
+    dispatch({
+      type: 'UPDATE_USER',
+      payload: user,
+    })
+  }
+}
