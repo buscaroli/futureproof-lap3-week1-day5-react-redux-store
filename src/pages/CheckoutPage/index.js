@@ -7,11 +7,9 @@ function CheckoutPage() {
     <div className={styles.wrapper}>
       <div className={styles.leftWrapper}>
         <ListBagItems />
-        {/* <div>ListBagItems</div> */}
-        <div>ListBagTotal</div>
       </div>
       <div className={styles.rightWrapper}>
-        <div>Address</div>
+        <div>AddressCheckout</div>
         <div>PaymentPage</div>
         <div>BackButton</div>
       </div>
