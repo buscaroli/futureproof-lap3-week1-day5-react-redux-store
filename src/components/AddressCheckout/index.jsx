@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { updateUserDetails } from '../../state/actionCreators'
 import styles from './index.module.css'
 
@@ -13,7 +13,7 @@ function AddressCheckout() {
   const [postcode, setPostcode] = useState('')
 
   const dispatch = useDispatch()
-  const navigate = useNavigate()
+  
 
   const handleNameChange = (e) => {
     e.preventDefault()
@@ -50,18 +50,34 @@ function AddressCheckout() {
   
   const handleFormSubmit = (e) => {
     e.preventDefault()
+    
+    const user = {
+      name,
+      surname, 
+      houseNumber,
+      first,
+      second,
+      postcode
+    }
+    
 
-    dispatch(updateUserDetails())
-    
-    setName('')
-    setSurname('')
-    setHouseNumber('')
-    setFirst('')
-    setSecond('')
-    setPostcode('')
-    
-    navigate('/thankyou')
-    // Direct to ThankYouPage
+    if (name !== '' &&
+        surname !== '' &&
+        houseNumber !== '' &&
+        first !== '' &&
+        second !== '' &&
+        postcode !== '') {
+          dispatch(updateUserDetails(user))
+
+          setName('')
+          setSurname('')
+          setHouseNumber('')
+          setFirst('')
+          setSecond('')
+          setPostcode('')
+        } else {
+          alert('Please fill in all the fields!')
+        }
   }
 
   return (
@@ -78,7 +94,7 @@ function AddressCheckout() {
       <input onChange={handleSecondChange}  className={styles.input}type="text" id="secondLineAddr" value={second}/>
       <label htmlFor="postcode">Postcode</label>
       <input onChange={handlePostcodeChange} className={styles.input} type="text" id="postcode" value={postcode}/>
-      <input onSubmit={handleFormSubmit}  className={`${styles.input} ${styles.btn}`}type="submit" value="Place Order"/>
+      <div onClick={handleFormSubmit} className={styles.btn}><Link to="/thankyou" className={styles.link}>Place Order </Link></div>
     </form>
   )
 }

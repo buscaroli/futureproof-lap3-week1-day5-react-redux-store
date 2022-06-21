@@ -1,6 +1,6 @@
 import { Routes as Switch, Route } from 'react-router-dom'
 import { Header, Footer } from './layout'
-import { MainPage, CheckoutPage } from './pages'
+import { MainPage, CheckoutPage, ThankYouPage } from './pages'
 import styles from './App.module.css'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Switch>
         <Route path="" element={<MainPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
-        {/* <Route path="/thankyou" element={<ThankYouPage />} /> */}
+        <Route path="/thankyou" element={<ThankYouPage />} />
       </Switch>
       <Footer />
     </div>
